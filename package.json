@@ -1,0 +1,31 @@
+{
+  "name": "express-async-patch",
+  "version": "0.1.0",
+  "description": "Patches Express router to support generators and Async-await",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js src example",
+    "precommit": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HallM/express-async-patch"
+  },
+  "author": "Matt Hall <mdhall@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HallM/express-async-patch/issues"
+  },
+  "homepage": "https://github.com/HallM/express-async-patch",
+  "dependencies": {
+    "co": "~4.6.0"
+  },
+  "peerDependencies": {
+    "express": "~4.15.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "express": "^4.15.3",
+    "husky": "^0.13.3"
+  }
+}
