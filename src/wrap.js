@@ -16,7 +16,7 @@ module.exports = function wrapMiddleware(genFn) {
 
   // if it is an AsyncConstructor, then it is already a promise
   // if not, then wrap the generator with co
-  const cr = isAsync ? genFn : co(genFn);
+  const cr = isAsync ? genFn : co.wrap(genFn);
 
   // properly wrap error handling functions
   if (genFn.length >= 4) {

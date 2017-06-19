@@ -3,11 +3,12 @@
 const express = require('express');
 const methods = require('methods');
 
-const wrapper = require('./wrap');
+const wrapper = require('./src/wrap');
 
-module.exports = function expressAsyncPatch() {
-  // only need to patch express.Router
-  // since an express app uses a Router internally
+module.exports = function expressAsyncPatch(app) {
+  // need to patch both the app and the router
+  // even though app internally uses a router, it still will hang
+  patch(app);
   patch(express.Router);
 };
 
