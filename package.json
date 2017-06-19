@@ -1,6 +1,6 @@
 {
   "name": "express-async-patch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Patches Express router to support generators and Async-await",
   "main": "index.js",
   "scripts": {

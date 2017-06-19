@@ -35,7 +35,8 @@ This does **not** enable Koa-like support for yield/await `next` to continue pro
 const express = require('express');
 const app = express();
 
-require('express-async-patch')();
+// must pass the app in to patch the app as well
+require('express-async-patch')(app);
 
 app.use(function*(req, res, next) {
   yield getAPromise();
